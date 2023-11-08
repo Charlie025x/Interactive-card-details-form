@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "mobile-hero-image": "url('/src/images/bg-main-mobile.png')",
+        "desktop-hero-image": "url('/src/images/bg-main-desktop.png)",
+      },
+    },
   },
   plugins: [],
 };
