@@ -71,7 +71,9 @@ export default function App() {
                 id="name"
                 maxLength={30}
                 {...register("name", { required: "can't be blank" })}
-                className="my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593]"
+                className={`my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593] ${
+                  errors.name?.message ? "border-red-500" : ""
+                }`}
                 placeholder="e.g. Jane Appleseed"
               />
               <p className="translate-y-[-.75rem] text-red-600">
@@ -99,7 +101,9 @@ export default function App() {
                   },
                   // maxLength: 16,
                 })}
-                className="my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593]"
+                className={`my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593] ${
+                  errors.cardNumber?.message ? "border-red-500" : ""
+                }`}
                 placeholder="e.g. 1234 5678 9123 0000"
                 onKeyDown={(e) => {
                   const backspacePressed = e.key !== "Backspace";
@@ -155,7 +159,9 @@ export default function App() {
                       message: "Enter 2 digit value",
                     },
                   })}
-                  className="my-4 w-full rounded-lg	border-2 border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593]"
+                  className={`my-4 w-full rounded-lg	border-2 border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593] ${
+                    errors.date?.message ? "border-red-500" : ""
+                  }`}
                   placeholder="MM"
                 />
                 <input
@@ -173,7 +179,9 @@ export default function App() {
                       message: "Enter 2 digit value",
                     },
                   })}
-                  className="my-4 w-full rounded-lg	border-2 border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593]"
+                  className={`my-4 w-full rounded-lg	border-2 border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593] ${
+                    errors.dateY?.message ? "border-red-500" : ""
+                  }`}
                   placeholder="YY"
                 />
               </div>
@@ -204,7 +212,9 @@ export default function App() {
                     message: "Enter 3 digit value",
                   },
                 })}
-                className="my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593]"
+                className={`my-4 block w-full rounded-lg border-2	border-[#8e8593] bg-transparent p-2 placeholder:text-[#8e8593] ${
+                  errors.cvc?.message ? "border-red-500" : ""
+                }`}
                 placeholder="e.g. 123"
               />
               <p className="translate-y-[-.75rem] text-red-600">
@@ -220,7 +230,7 @@ export default function App() {
             </button>
           </form>
         )}
-        <DevTool control={control} />
+        {/* <DevTool control={control} /> */}
 
         {isSubmitSuccessful && (
           <div className=" flex flex-col items-center gap-4 text-center">
