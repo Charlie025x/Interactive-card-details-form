@@ -4,7 +4,7 @@ import { DevTool } from "@hookform/devtools";
 import { useEffect } from "react";
 
 export default function App() {
-  const { register, handleSubmit, watch, control, formState, setValue } =
+  const { register, handleSubmit, watch, control, formState, setValue, reset } =
     useForm();
   const { errors, isDirty, isValid, isSubmitSuccessful } = formState;
 
@@ -233,7 +233,10 @@ export default function App() {
               thank you!
             </h1>
             <p className="mb-4 text-[#8e8593]">We've added your card details</p>
-            <button className="col-span-4  w-full max-w-lg rounded-lg bg-[#21092f] py-2 text-white">
+            <button
+              onClick={() => reset()}
+              className="col-span-4  w-full max-w-lg rounded-lg bg-[#21092f] py-2 text-white"
+            >
               Continue
             </button>
           </div>
