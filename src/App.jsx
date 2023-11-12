@@ -17,19 +17,19 @@ export default function App() {
   const yy = watch("dateY");
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen lg:flex">
       {/* card container */}
-      <div className="h-60 w-full bg-mobile-hero-image bg-cover">
-        <div className="relative mx-auto h-full max-w-md">
+      <div className="h-60 w-full bg-mobile-hero-image bg-cover lg:h-screen lg:w-2/6 lg:bg-desktop-hero-image">
+        <div className="relative mx-auto h-full max-w-md lg:flex  lg:flex-col-reverse lg:items-end lg:justify-center lg:gap-6">
           {/* card back */}
-          <div className="absolute right-5 top-10 w-3/4 max-w-[300px]">
+          <div className="absolute right-5 top-10 w-3/4 max-w-[300px] lg:relative lg:left-2/4 lg:top-0">
             <img src={"./src/images/bg-card-back.png"} alt="" className="" />
             <p className="absolute right-[15%] top-[44%] text-xs text-white">
               {cvc || "000"}
             </p>
           </div>
           {/* card front */}
-          <div className="absolute left-5 top-32 w-3/4 max-w-[300px]">
+          <div className="absolute left-5 top-32 w-3/4 max-w-[300px] lg:relative lg:left-1/4 lg:top-0">
             <img src={"./src/images/bg-card-front.png"} alt="" />
             <div className="absolute top-4">
               <div className="flex items-center">
@@ -52,7 +52,7 @@ export default function App() {
         </div>
       </div>
       {/* form container */}
-      <div className="mx-auto h-[70vh] w-full max-w-2xl px-4 pt-20">
+      <div className="mx-auto h-[70vh] w-full max-w-2xl px-4 pt-20  lg:flex lg:h-screen lg:w-4/6 lg:max-w-lg lg:items-center lg:pl-32 lg:pt-0">
         {!isSubmitSuccessful && (
           <form
             onSubmit={handleSubmit(onSubmit)}
