@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "mobile-hero-image": "url('/src/images/bg-main-mobile.png')",
-        "desktop-hero-image": "url('/src/images/bg-main-desktop.png')",
-        "card-front": "url('/src/images/bg-card-front.png')",
-        "card-back": "url('/src/images/bg-card-back.png')",
+        "mobile-hero-image": "url('/images/bg-main-mobile.png')",
+        "desktop-hero-image": "url('/images/bg-main-desktop.png')",
+        "card-front": "url('/images/bg-card-front.png')",
+        "card-back": "url('/images/bg-card-back.png')",
       },
     },
   },

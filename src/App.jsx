@@ -23,14 +23,14 @@ export default function App() {
         <div className="relative mx-auto h-full max-w-md lg:flex  lg:flex-col-reverse lg:items-end lg:justify-center lg:gap-6">
           {/* card back */}
           <div className="absolute right-5 top-10 w-3/4 max-w-[300px] lg:relative lg:left-2/4 lg:top-0">
-            <img src={"./src/images/bg-card-back.png"} alt="" className="" />
+            <img src={"./images/bg-card-back.png"} alt="" className="" />
             <p className="absolute right-[15%] top-[44%] text-xs text-white">
               {cvc || "000"}
             </p>
           </div>
           {/* card front */}
           <div className="absolute left-5 top-32 w-3/4 max-w-[300px] lg:relative lg:left-1/4 lg:top-0">
-            <img src={"./src/images/bg-card-front.png"} alt="" />
+            <img src={"./images/bg-card-front.png"} alt="" />
             <div className="absolute top-4">
               <div className="flex items-center">
                 <div className=" ml-4 h-6 w-6 rounded-full bg-white"></div>
