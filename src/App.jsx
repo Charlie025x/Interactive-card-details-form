@@ -20,28 +20,28 @@ export default function App() {
     <div className="min-h-screen lg:flex">
       {/* card container */}
       <div className="h-60 w-full bg-mobile-hero-image bg-cover lg:h-screen lg:w-2/6 lg:bg-desktop-hero-image">
-        <div className="relative mx-auto h-full max-w-md lg:flex  lg:flex-col-reverse lg:items-end lg:justify-center lg:gap-6">
+        <div className="relative mx-auto h-full max-w-md lg:flex  lg:flex-col-reverse lg:items-end lg:justify-center lg:gap-6 2xl:gap-8">
           {/* card back */}
-          <div className="absolute right-5 top-10 w-3/4 max-w-[300px] lg:relative lg:left-2/4 lg:top-0">
+          <div className="absolute right-5 top-10 w-3/4 max-w-[300px] lg:relative lg:left-2/4 lg:top-0 lg:w-[300px] lg:max-w-none 2xl:left-2/3 2xl:w-[400px]">
             <img src={"./images/bg-card-back.png"} alt="" className="" />
-            <p className="absolute right-[15%] top-[44%] text-xs text-white">
+            <p className="absolute right-[15%] top-[44%] text-xs text-white 2xl:text-base">
               {cvc || "000"}
             </p>
           </div>
           {/* card front */}
-          <div className="absolute left-5 top-32 w-3/4 max-w-[300px] lg:relative lg:left-1/4 lg:top-0">
+          <div className="absolute left-5 top-32 w-3/4 max-w-[300px] lg:relative lg:left-1/4 lg:top-0 lg:w-[300px] lg:max-w-none 2xl:left-2/4 2xl:w-[400px]">
             <img src={"./images/bg-card-front.png"} alt="" />
-            <div className="absolute top-4">
+            <div className="absolute top-4 2xl:top-6">
               <div className="flex items-center">
-                <div className=" ml-4 h-6 w-6 rounded-full bg-white"></div>
+                <div className=" ml-4 h-6 w-6 rounded-full bg-white 2xl:ml-6 2xl:h-8 2xl:w-8"></div>
                 <div className="ml-2  h-4 w-4 rounded-full border"></div>
               </div>
             </div>
-            <div className="absolute bottom-4 w-full px-4 text-justify text-white">
-              <p className="pb-3 text-justify">
+            <div className="absolute bottom-4 w-full px-4 text-justify text-white 2xl:px-6">
+              <p className="pb-3 text-justify 2xl:text-2xl">
                 {cardNumber || "0000 0000 0000 0000"}
               </p>
-              <div className="flex justify-between text-xs">
+              <div className="flex justify-between text-xs 2xl:text-base">
                 <p className="">{name || "JANE APPLESEED"}</p>
                 <p className="">
                   {mm || "00"}/{yy || "00"}
